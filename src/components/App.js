@@ -93,7 +93,7 @@ class App extends React.Component {
 
 	render(){
 		return(
-			<>
+			<div>
 				<Route exact path={["/acting","/film","/politics","/programming"]} render={()=>{
 					return (
 						<>
@@ -125,7 +125,7 @@ class App extends React.Component {
 						return (<div id="attribution">Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> and <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a> and <a href="https://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>);
 					}}/>
 				</div>
-			</>
+			</div>
 		);
 	}
 

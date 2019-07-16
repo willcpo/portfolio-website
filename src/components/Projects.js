@@ -1,6 +1,6 @@
 import React from "react";
 import SliderMenu from "./SliderMenu";
-import projectInfo from "../projectInfo.json";
+import projectInfo from "../projectInfo";
 //import * as api from "../api";
 
 class Projects extends React.Component {

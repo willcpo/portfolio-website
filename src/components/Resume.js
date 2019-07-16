@@ -1,5 +1,5 @@
 import React from "react";
-import ResumeJSON from "../ResumeJSON.json";
+import ResumeJSON from "../ResumeJSON.js";
 //import * as api from "../api";
 
 class Resume extends React.Component {
