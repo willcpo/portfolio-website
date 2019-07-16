@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "babel-node": "./node_modules/bin/babel-node"
+  },
   "scripts": {
     "start": "babel-node server.js",
     "heroku-postbuild": "webpack -p",
