@@ -21,11 +21,11 @@ body {
   height: 81.2px; }
 
 @keyframes Logo {
-  0%, 2% {
+  0%, 7% {
     width: 112px; }
-  15%, 52% {
+  20%, 57% {
     width: 212.8px; }
-  72%, 100% {
+  77%, 100% {
     width: 112px; } }
 
 .w {
@@ -43,13 +43,13 @@ body {
   animation-timing-function: cubic-bezier(0.25, 0, 0, 1); }
 
 @keyframes ill {
-  0%, 2% {
+  0%, 7% {
     right: 43.4px;
     opacity: 0; }
-  15%, 48% {
+  20%, 53% {
     right: 5.6px;
     opacity: 1; }
-  70%, 100% {
+  75%, 100% {
     right: 43.4px;
     opacity: 0; } }
 
@@ -63,11 +63,11 @@ body {
   animation-timing-function: cubic-bezier(0.25, 0, 0, 1); }
 
 @keyframes p {
-  0%, 2% {
+  0%, 7% {
     right: 28px; }
-  15%, 48% {
+  20%, 53% {
     right: -5.6px; }
-  76%, 100% {
+  81%, 100% {
     right: 28px; } }
 
 .owers {
@@ -79,13 +79,13 @@ body {
   animation-timing-function: cubic-bezier(0.25, 0, 0, 1); }
 
 @keyframes owers {
-  0%, 2% {
+  0%, 7% {
     right: 126px;
     opacity: 0; }
-  18%, 50% {
+  23%, 55% {
     right: 5.6px;
     opacity: 1; }
-  72%, 100% {
+  77%, 100% {
     right: 126px;
     opacity: 0; } }
 

@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node server.js --ignore public/",
-    "dev": "concurrently \"npm start\" \"webpack -wd\" \"mongod\""
+    "start": "babel-node server.js",
+    "heroku-postbuild": "webpack -p",
+    "devstart": "nodemon --exec babel-node server.js --ignore public/",
+    "dev": "concurrently \"npm run devstart\" \"webpack -wd\""
   },
   "author": "",
   "license": "ISC",
