@@ -44,9 +44,9 @@ body{
 }
 
 @keyframes Logo {
-	0%, 7% {width: scaleNav(80px);}
-	20%, 57% {width: scaleNav(152px);}
-	77%, 100% {width: scaleNav(80px);}
+	0%, 2% {width: scaleNav(80px);}
+	15%, 52% {width: scaleNav(152px);}
+	72%, 100% {width: scaleNav(80px);}
 }
 
 
@@ -67,9 +67,9 @@ body{
 }
 
 @keyframes ill {
-	0%, 7% {right: scaleNav(31px); opacity: 0}
-	20%, 53% {right: scaleNav(4px); opacity: 1}
-	75%, 100% {right: scaleNav(31px); opacity: 0}
+	0%, 2% {right: scaleNav(31px); opacity: 0}
+	15%, 48% {right: scaleNav(4px); opacity: 1}
+	70%, 100% {right: scaleNav(31px); opacity: 0}
 }
 
 .p{
@@ -83,9 +83,9 @@ body{
 }
 
 @keyframes p {
-	0%, 7% {right: scaleNav(20px);}
-	20%, 53% {right: scaleNav(-4px);}
-	81%, 100% {right: scaleNav(20px);}
+	0%, 2% {right: scaleNav(20px);}
+	15%, 48% {right: scaleNav(-4px);}
+	76%, 100% {right: scaleNav(20px);}
 }
 
 .owers{
@@ -98,9 +98,9 @@ body{
 }
 
 @keyframes owers {
-	0%, 7% {right: scaleNav(90px); opacity: 0}
-	23%, 55% {right: scaleNav(4px); opacity: 1}
-	77%, 100% {right: scaleNav(90px); opacity: 0}
+	0%, 2% {right: scaleNav(90px); opacity: 0}
+	18%, 50% {right: scaleNav(4px); opacity: 1}
+	72%, 100% {right: scaleNav(90px); opacity: 0}
 }
 
 .hidehoo{
