@@ -3,19 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "bin": {
-    "babel-node": "./node_modules/bin/babel-node"
-  },
   "scripts": {
-    "start": "babel-node server.js",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./src -s",
+    "build": "npm run clean && npm run build-babel",
+    "start": "npm run build && node ./build/server.js",
     "heroku-postbuild": "webpack -p",
-    "devstart": "nodemon --exec babel-node server.js --ignore public/",
+    "devstart": "nodemon --exec babel-node src/server.js --ignore public/",
     "dev": "concurrently \"npm run devstart\" \"webpack -wd\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/preset-env": "^7.4.5",
     "axios": "^0.19.0",
+    "babel-cli": "^6.26.0",
     "ejs": "^2.6.2",
     "express": "^4.17.1",
     "mongoose": "^5.6.4",
@@ -29,7 +31,6 @@
     "@babel/core": "^7.4.5",
     "@babel/node": "^7.x",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
-    "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",

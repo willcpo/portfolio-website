@@ -1,8 +1,8 @@
-import config from "./config";
+import config from "../config";
 import sassMiddleware from "node-sass-middleware";
 import path from "path";
 import React from "react";
-import App from "./src/components/App";
+import App from "./components/App";
 
 import ReactDOMServer from "react-dom/server";
 import { StaticRouter } from "react-router-dom";
