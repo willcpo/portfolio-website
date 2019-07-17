@@ -854,6 +854,10 @@ body {
           .contactPage .contactFirstRow .contactSection .contactInfo {
             font-size: 29px;
             padding: 19px; } }
+        @media screen and (max-width: 505px) {
+          .contactPage .contactFirstRow .contactSection .contactInfo {
+            font-size: 29px;
+            padding: 0px; } }
   .contactPage .tempColumn {
     display: -webkit-box;
     display: -ms-flexbox;
