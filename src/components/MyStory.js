@@ -1,9 +1,93 @@
 import React from "react";
-import {Switch, Route, Link} from "react-router-dom";
+import {Switch, Route, Link, withRouter} from "react-router-dom";
 
 //import * as api from "../api";
 
 class MyStory extends React.Component {
+
+	constructor(props){
+		super(props);
+		this.state = { 
+			storyLineInfo: {
+				leftX: "-100px",
+				centerX: "-100px",
+				topY: "-100px",
+				bottomY: "-100px",
+				heightDiff: "0px"
+			},
+		};
+
+		this.resize = this.resize.bind(this);
+	}
+
+	componentDidMount(){
+		if (this.props.context) return;
+		let links = document.querySelectorAll(".circleLink");
+
+		links.forEach((link)=>{
+
+			link.addEventListener("click",()=>{
+
+				setTimeout(()=>{
+					this.resize();
+				},200);
+			});
+
+		});
+		
+		window.addEventListener("resize",this.resize);
+		
+		setTimeout(()=>{
+			this.resize.call();
+		},100);
+		
+	}
+
+
+	componentWillUnmount(){
+		if (this.props.context) return;
+		window.removeEventListener("resize",this.resize);
+	}
+
+	resize(){
+		if (this.props.history.location.pathname=="/" ){
+			if (window.innerWidth > 689){
+				this.props.history.push("/programming");
+				setTimeout(()=>{
+					this.resize.call();
+				},50);
+				return;
+			} else {
+				return;
+			}
+			
+		}
+	
+		let display = document.querySelector(".display");
+		let selected = document.querySelector(".selectedStory");
+		let timeline = document.querySelector(".timeline");
+	
+		let displayBoundingRect = display.getBoundingClientRect();
+		let selectedBoundingRect = selected.getBoundingClientRect();
+	
+		let displayX = display.offsetLeft;
+		let displayY = display.offsetTop;
+		let displayWidth = displayBoundingRect.width;
+		let displayHeight = displayBoundingRect.height;
+	
+		let selectedX = timeline.offsetLeft;
+		let selectedY = selected.offsetTop+50;
+		let selectedHeight = selectedBoundingRect.height;
+	
+		this.setState({storyLineInfo: {
+			leftX: (displayX+displayWidth)+"px",
+			centerX: (displayX+displayWidth+selectedX)/2+"px",
+			LeftY: displayY+displayHeight/2+"px",
+			topY: (Math.min(displayY+displayHeight/2, selectedY+selectedHeight/2)+2)+"px",
+			RightY: selectedY+selectedHeight/2+"px",
+			heightDiff: (Math.abs((displayY+displayHeight/2) - (selectedY+selectedHeight/2))-2)+"px"
+		}});
+	}
 
 
 	render(){
@@ -70,13 +154,21 @@ class MyStory extends React.Component {
 					)
 					}/>
 				</Switch>
+				<Route exact path={["/acting","/film","/politics","/programming"]} render={()=>{
+					return (
+						<>
+						<div className="storyLineHorizontal" style={{left: this.state.storyLineInfo.leftX, top: this.state.storyLineInfo.LeftY}}></div>
+						<div className="storyLineHorizontal" style={{left: this.state.storyLineInfo.centerX, top: this.state.storyLineInfo.RightY}}></div>
+						<div className="storyLineVertical" style={{left: this.state.storyLineInfo.centerX, top: this.state.storyLineInfo.topY, height: this.state.storyLineInfo.heightDiff}}></div>
+						</>
+					);
+				}}/>
 				<div className="timeline">
-
 					<div className="line"></div>
-					<Link className="circleLink" id="acting" to="/acting"><img src="/img/theater.svg" className="circle" /></Link>
-					<Link className="circleLink" id="film" to="/film"><img src="/img/clapperboard.svg" className="circle" /></Link>
-					<Link className="circleLink" id="politics" to="/politics"><img src="/img/capitol.svg" className="circle" /></Link>
-					<Link className="circleLink" id="programming" to="/programming"><img src="/img/analytics.svg" className="circle" /></Link>
+					<Link className={this.props.location.pathname.toLowerCase()=="/acting"?"selectedStory circleLink":"circleLink"} id="acting" to="/acting"><img src="/img/theater.svg" className="circle"/></Link>
+					<Link className={this.props.location.pathname.toLowerCase()=="/film"?"selectedStory circleLink":"circleLink"} id="film" to="/film"><img src="/img/clapperboard.svg" className="circle" /></Link>
+					<Link className={this.props.location.pathname.toLowerCase()=="/politics"?"selectedStory circleLink":"circleLink"} id="politics" to="/politics"><img src="/img/capitol.svg"className="circle" /></Link>
+					<Link className={this.props.location.pathname.toLowerCase()=="/programming"?"selectedStory circleLink":"circleLink"} id="programming" to="/programming"><img src="/img/analytics.svg" className="circle" /></Link>
 			
 				</div>
 			</div>
@@ -87,4 +179,4 @@ class MyStory extends React.Component {
 	
 }
 
-export default MyStory;
+export default withRouter(MyStory);

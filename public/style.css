@@ -232,7 +232,7 @@ body {
   width: 340px;
   background-color: #333533;
   display: inline-block;
-  margin-top: 10%;
+  margin-top: 5%;
   margin-bottom: 10%;
   margin-right: 100px;
   border-radius: 30px;
@@ -254,6 +254,12 @@ body {
       z-index: 6;
       display: block;
       padding: 0; } }
+  @media screen and (min-width: 690px) {
+    .display {
+      width: 300px; } }
+  @media screen and (min-width: 890px) {
+    .display {
+      width: 500px; } }
 
 .storyContent {
   margin: 20px; }
@@ -453,9 +459,13 @@ body {
 
 .projectRow {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  width: 100%; }
+  @media screen and (max-width: 689px) {
+    .projectRow {
+      flex-flow: column; } }
 
 .projectBox .projectRow:last-child p {
   color: gray; }
@@ -464,9 +474,25 @@ body {
   border-radius: 5px;
   max-height: 324px;
   max-width: 100%; }
-  @media screen and (min-width: 615px) {
+  @media screen and (min-width: 1113px) {
     .projectImg img {
       margin: 25px; } }
+  @media screen and (max-width: 1112px) {
+    .projectImg img {
+      margin: 0; } }
+
+@media screen and (min-width: 1112px) and (max-width: 1199px) {
+  .projectImg {
+    max-width: 80%; } }
+
+@media screen and (max-width: 1112px) {
+  .projectImg {
+    width: 45%;
+    margin: 10px; } }
+
+@media screen and (max-width: 689px) {
+  .projectImg {
+    width: 100%; } }
 
 .projectText {
   box-sizing: border-box;
@@ -475,11 +501,32 @@ body {
   color: lightgray;
   font-size: 17px;
   text-align: justify;
-  line-height: 1.5; }
+  line-height: 2; }
   @media screen and (min-width: 1110px) {
     .projectText {
       padding-left: 50px;
-      padding-right: 50px; } }
+      padding-right: 50px;
+      font-size: 18px; } }
+  @media screen and (max-width: 1112px) {
+    .projectText {
+      font-size: 18px;
+      margin: 10px;
+      width: 40%;
+      line-height: 1.25; } }
+  @media screen and (max-width: 524px) {
+    .projectText {
+      font-size: 17px; } }
+  @media screen and (max-width: 409px) {
+    .projectText {
+      line-height: 1.7; } }
+  @media screen and (max-width: 836px) {
+    .projectText {
+      font-size: 14px; } }
+  @media screen and (max-width: 689px) {
+    .projectText {
+      width: 100%;
+      font-size: 18px;
+      line-height: 1.5; } }
 
 .githubLink {
   text-decoration: none;
@@ -502,7 +549,6 @@ body {
   padding: 20px; }
   @media screen and (min-width: 690px) {
     .contactPage {
-      margin-top: 40px;
       margin-bottom: 40px; } }
   @media screen and (max-width: 689px) {
     .contactPage {
@@ -514,16 +560,22 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     max-width: 1230px; }
-    @media screen and (max-width: 689px) {
+    @media screen and (max-width: 605px) {
       .contactPage .contactFirstRow {
         flex-direction: column; } }
+    @media screen and (max-width: 689px) {
+      .contactPage .contactFirstRow {
+        margin-top: 50px; } }
+    @media screen and (max-width: 920px) {
+      .contactPage .contactFirstRow {
+        max-width: 700px; } }
     .contactPage .contactFirstRow .personalSection {
       background-color: #333533;
       display: flex;
       flex-flow: column;
-      align-content: space-between;
+      align-content: space-evenly;
       justify-content: center;
       padding: 20px;
       border-radius: 25px;
@@ -544,6 +596,9 @@ body {
           display: block; }
         .contactPage .contactFirstRow .personalSection .locationInfo b {
           color: #F5CB5C; }
+      @media screen and (max-width: 605px) {
+        .contactPage .contactFirstRow .personalSection {
+          width: 80%; } }
     .contactPage .contactFirstRow .contactInfoSection {
       min-width: 240px;
       max-width: 480px;
@@ -556,60 +611,133 @@ body {
         display: block;
         color: lightgray;
         line-height: 1.5; }
-      @media screen and (max-width: 1169px) and (min-width: 690px) {
+      @media screen and (max-width: 920px) {
         .contactPage .contactFirstRow .contactInfoSection {
-          order: 3; } }
+          max-width: initial;
+          width: 566px; } }
+      @media screen and (max-width: 689px) {
+        .contactPage .contactFirstRow .contactInfoSection {
+          width: 100%;
+          margin-left: 0;
+          margin-right: 0; } }
+      @media screen and (max-width: 605px) {
+        .contactPage .contactFirstRow .contactInfoSection {
+          width: 86%; } }
+      @media screen and (max-width: 505px) {
+        .contactPage .contactFirstRow .contactInfoSection {
+          width: 75%; } }
+    @media screen and (max-width: 920px) {
+      .contactPage .contactFirstRow .cs1 {
+        display: none !important; } }
+    @media screen and (min-width: 921px) {
+      .contactPage .contactFirstRow .cs2 {
+        display: none !important; } }
     .contactPage .contactFirstRow .contactSection {
       background-color: #333533;
       display: flex;
       flex-flow: column;
-      align-content: space-between;
+      align-content: center;
       justify-content: center;
       padding: 20px;
       border-radius: 25px;
+      max-width: 460px;
       margin: 20px; }
-      @media screen and (max-width: 1169px) and (min-width: 690px) {
+      @media screen and (min-width: 921px) {
         .contactPage .contactFirstRow .contactSection {
-          order: 2; } }
+          flex-flow: row;
+          padding-left: 7px;
+          padding-right: 7px; } }
+      @media screen and (max-width: 920px) {
+        .contactPage .contactFirstRow .contactSection {
+          max-width: 240.078px;
+          width: 240.078px;
+          height: 391px; } }
+      @media screen and (max-width: 689px) {
+        .contactPage .contactFirstRow .contactSection {
+          width: 165.078px; } }
+      @media screen and (max-width: 605px) {
+        .contactPage .contactFirstRow .contactSection {
+          width: 88%;
+          max-width: initial;
+          flex-flow: row;
+          height: initial;
+          padding: 0;
+          margin-left: 0;
+          margin-right: 0; } }
+      @media screen and (max-width: 505px) {
+        .contactPage .contactFirstRow .contactSection {
+          flex-flow: column; } }
+      @media screen and (max-width: 605px) {
+        .contactPage .contactFirstRow .contactSection p {
+          font-size: 20px; } }
+      @media screen and (max-width: 505px) {
+        .contactPage .contactFirstRow .contactSection p {
+          font-size: 30px;
+          padding: 0; } }
+      .contactPage .contactFirstRow .contactSection img {
+        height: 22px; }
+        @media screen and (max-width: 689px) {
+          .contactPage .contactFirstRow .contactSection img {
+            margin-left: -22px; } }
+        @media screen and (max-width: 605px) {
+          .contactPage .contactFirstRow .contactSection img {
+            margin-left: 0px; } }
       .contactPage .contactFirstRow .contactSection .contactInfo {
-        display: flex;
-        flex-flow: column;
-        align-content: space-around;
         color: lightgray;
-        font-size: 20px;
-        margin-top: 10px; }
-        .contactPage .contactFirstRow .contactSection .contactInfo p {
-          display: block; }
-        .contactPage .contactFirstRow .contactSection .contactInfo b {
-          color: #F5CB5C; }
-        .contactPage .contactFirstRow .contactSection .contactInfo img {
-          height: 22px; }
-  .contactPage .socialMedia {
+        font-size: 20px; }
+        @media screen and (min-width: 921px) {
+          .contactPage .contactFirstRow .contactSection .contactInfo {
+            margin-left: 20px;
+            margin-right: 20px; } }
+        @media screen and (max-width: 920px) {
+          .contactPage .contactFirstRow .contactSection .contactInfo {
+            font-size: 29px;
+            padding: 19px; } }
+  .contactPage .tempColumn {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    max-width: 500px;
+    align-items: center; }
+    @media screen and (max-width: 920px) {
+      .contactPage .tempColumn {
+        order: 3; } }
+  .contactPage .socialRow {
+    display: flex;
+    flex-flow: row;
     flex-wrap: wrap;
+    align-content: space-between;
     justify-content: center; }
-  .contactPage .socialMedia a {
+  .contactPage .socialMedia {
     background-color: #333533;
     padding: 20px;
     border-radius: 25px;
     color: lightgray;
-    font-size: 20px;
+    font-size: 24px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    font-size: 36px;
     text-decoration: none;
     margin: 20px;
     min-width: 240px;
-    max-width: 480px;
+    max-width: 337px;
     width: 75%; }
-    .contactPage .socialMedia a img {
+    .contactPage .socialMedia img {
       display: block;
-      height: 100px;
-      width: 100px; }
+      height: 77px;
+      width: 77px; }
+    @media screen and (max-width: 920px) {
+      .contactPage .socialMedia {
+        max-width: initial;
+        width: 566px;
+        font-size: 27px; }
+        .contactPage .socialMedia img {
+          height: 100px;
+          width: 100px; } }
+    @media screen and (max-width: 689px) {
+      .contactPage .socialMedia {
+        width: 500px; } }
 
 .collapsedcontent {
   max-height: 0;
@@ -617,16 +745,20 @@ body {
   transition: max-height 0.2s ease-out; }
 
 .resumeContent {
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 40px;
   text-align: left; }
 
 .pdf {
-  margin-top: 20px;
+  position: relative;
+  top: -10px;
   color: lightgray;
   text-decoration: none;
   margin-left: 28.5px;
-  font-weight: 900; }
+  font-weight: 900;
+  border: 1px solid indianred;
+  padding: 10px;
+  border-radius: 5px; }
 
 .resumeRow {
   vertical-align: middle;
@@ -649,13 +781,13 @@ body {
     padding-left: 19.5px; }
 
 .rowNum0 {
-  line-height: 81px;
-  font-size: 48px;
+  line-height: 80px;
+  font-size: 42px;
   color: #F5CB5C;
   padding-left: 29px;
   vertical-align: middle; }
   .rowNum0 .resumeArrow {
-    top: 31.5px; }
+    top: 35.5px; }
   .rowNum0 .resumeDot {
     top: 33.5px; }
 
@@ -664,38 +796,40 @@ body {
   color: #F5CB5C;
   background-color: #333533;
   padding-left: 45px;
-  line-height: 49px; }
+  line-height: 58px; }
   .rowNum1 .resumeArrow {
-    top: 15.5px; }
+    top: 24.5px; }
   .rowNum1 .resumeDot {
-    top: 17.5px; }
+    top: 22.5px; }
 
 .rowNum2 {
   font-size: 16px;
   color: white;
   padding-left: 61px;
-  line-height: 30px; }
+  line-height: 36px; }
   .rowNum2 .resumeArrow {
-    top: 10.5px; }
-  .rowNum2 .resumeDot {
     top: 12.5px; }
+  .rowNum2 .resumeDot {
+    top: 14.5px; }
 
 .rowNum3 {
-  font-size: 12px;
+  font-size: 16px;
   color: lightgrey;
   padding-left: 77px;
-  line-height: 30px; }
+  line-height: 33px; }
   .rowNum3 .resumeArrow {
-    top: 7.5px; }
+    top: 15.5px; }
   .rowNum3 .resumeDot {
-    top: 9.5px; }
+    top: 13.5px; }
 
 .rowNum4 {
-  font-size: 12px;
+  font-size: 16px;
   color: lightgrey;
   padding-left: 93px;
-  line-height: 30px; }
+  line-height: 33px; }
   .rowNum4 .resumeArrow {
-    top: 7.5px; }
+    top: 15.5px; }
   .rowNum4 .resumeDot {
-    top: 9.5px; }
+    top: 13.5px; }
+
+/*# sourceMappingURL=style.css.map */

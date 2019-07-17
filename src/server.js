@@ -10,14 +10,16 @@ import { StaticRouter } from "react-router-dom";
 import express from "express";
 const server = express();
 
-server.use(sassMiddleware({
-	src: path.join(__dirname, "sass"),
-	dest: path.join(__dirname, "public")
-}));
-
 server.set("view engine", "ejs");
 
+server.use(sassMiddleware({
+	src: path.join(__dirname, "/../sass"),
+	dest: path.join(__dirname, "/../public"),
+	indentedSyntax : false,
+	sourceMap: true
+}));
 server.use(express.static("public"));
+
 
 server.get("*", (req, res)=>{
 	res.render("index",{

@@ -21,9 +21,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -35,15 +35,97 @@ var MyStory =
 function (_React$Component) {
   _inherits(MyStory, _React$Component);
 
-  function MyStory() {
+  function MyStory(props) {
+    var _this;
+
     _classCallCheck(this, MyStory);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(MyStory).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(MyStory).call(this, props));
+    _this.state = {
+      storyLineInfo: {
+        leftX: "-100px",
+        centerX: "-100px",
+        topY: "-100px",
+        bottomY: "-100px",
+        heightDiff: "0px"
+      }
+    };
+    _this.resize = _this.resize.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(MyStory, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      if (this.props.context) return;
+      console.log("mounting");
+      var links = document.querySelectorAll(".circleLink");
+      links.forEach(function (link) {
+        link.addEventListener("click", function () {
+          setTimeout(function () {
+            _this2.resize();
+          }, 50);
+        });
+      });
+      window.addEventListener("resize", this.resize);
+      this.resize();
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      if (this.props.context) return;
+      console.log("unmounting");
+      window.removeEventListener("resize", this.resize);
+    }
+  }, {
+    key: "resize",
+    value: function resize() {
+      var _this3 = this;
+
+      if (this.props.history.location.pathname == "/") {
+        if (window.innerWidth > 689) {
+          this.props.history.push("/programming");
+          var thiss = this;
+          setTimeout(function () {
+            _this3.resize.call(thiss, "programming", thiss.setState.bind(thiss));
+          }, 50);
+          return;
+        } else {
+          return;
+        }
+      }
+
+      console.log("resizing");
+      var display = document.querySelector(".display");
+      var selected = document.querySelector(".selectedStory");
+      var timeline = document.querySelector(".timeline");
+      var displayBoundingRect = display.getBoundingClientRect();
+      var selectedBoundingRect = selected.getBoundingClientRect();
+      var displayX = display.offsetLeft;
+      var displayY = display.offsetTop;
+      var displayWidth = displayBoundingRect.width;
+      var displayHeight = displayBoundingRect.height;
+      var selectedX = timeline.offsetLeft;
+      var selectedY = selected.offsetTop + 50;
+      var selectedHeight = selectedBoundingRect.height;
+      this.setState({
+        storyLineInfo: {
+          leftX: displayX + displayWidth + "px",
+          centerX: (displayX + displayWidth + selectedX) / 2 + "px",
+          LeftY: displayY + displayHeight / 2 + "px",
+          topY: Math.min(displayY + displayHeight / 2, selectedY + selectedHeight / 2) + 2 + "px",
+          RightY: selectedY + selectedHeight / 2 + "px",
+          heightDiff: Math.abs(displayY + displayHeight / 2 - (selectedY + selectedHeight / 2)) - 2 + "px"
+        }
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this4 = this;
+
       return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement("h1", {
         className: "pageTitle storyPageTitle"
       }, "My Story"), _react["default"].createElement("div", {
@@ -124,33 +206,58 @@ function (_React$Component) {
             className: "storyParagraph"
           }, "\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0While I deeply enjoyed learning about politics through the lens of game theory and statistical analysis, I realized that that career trajectory would not lead me to help implement technological and historical triumphs. For that, my eyes turned toward the society-changing sectors of software and web technologies.", _react["default"].createElement("br", null), _react["default"].createElement("br", null), "\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0The extension of human thought and memory, facilitated by communication and software technologies have allowed humans to understand more about their world and expand their potentials. That is a revolution of human history that I would like to be a part of.", _react["default"].createElement("br", null), _react["default"].createElement("br", null), "\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0That is exactly why I chose to change my major once again and graduate Magna Cum Laude, majoring in Computer Science with a GPA of 3.95")));
         }
-      })), _react["default"].createElement("div", {
+      })), _react["default"].createElement(_reactRouterDom.Route, {
+        exact: true,
+        path: ["/acting", "/film", "/politics", "/programming"],
+        render: function render() {
+          return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement("div", {
+            className: "storyLineHorizontal",
+            style: {
+              left: _this4.state.storyLineInfo.leftX,
+              top: _this4.state.storyLineInfo.LeftY
+            }
+          }), _react["default"].createElement("div", {
+            className: "storyLineHorizontal",
+            style: {
+              left: _this4.state.storyLineInfo.centerX,
+              top: _this4.state.storyLineInfo.RightY
+            }
+          }), _react["default"].createElement("div", {
+            className: "storyLineVertical",
+            style: {
+              left: _this4.state.storyLineInfo.centerX,
+              top: _this4.state.storyLineInfo.topY,
+              height: _this4.state.storyLineInfo.heightDiff
+            }
+          }));
+        }
+      }), _react["default"].createElement("div", {
         className: "timeline"
       }, _react["default"].createElement("div", {
         className: "line"
       }), _react["default"].createElement(_reactRouterDom.Link, {
-        className: "circleLink",
+        className: this.props.location.pathname.toLowerCase() == "/acting" ? "selectedStory circleLink" : "circleLink",
         id: "acting",
         to: "/acting"
       }, _react["default"].createElement("img", {
         src: "/img/theater.svg",
         className: "circle"
       })), _react["default"].createElement(_reactRouterDom.Link, {
-        className: "circleLink",
+        className: this.props.location.pathname.toLowerCase() == "/film" ? "selectedStory circleLink" : "circleLink",
         id: "film",
         to: "/film"
       }, _react["default"].createElement("img", {
         src: "/img/clapperboard.svg",
         className: "circle"
       })), _react["default"].createElement(_reactRouterDom.Link, {
-        className: "circleLink",
+        className: this.props.location.pathname.toLowerCase() == "/politics" ? "selectedStory circleLink" : "circleLink",
         id: "politics",
         to: "/politics"
       }, _react["default"].createElement("img", {
         src: "/img/capitol.svg",
         className: "circle"
       })), _react["default"].createElement(_reactRouterDom.Link, {
-        className: "circleLink",
+        className: this.props.location.pathname.toLowerCase() == "/programming" ? "selectedStory circleLink" : "circleLink",
         id: "programming",
         to: "/programming"
       }, _react["default"].createElement("img", {
@@ -163,6 +270,7 @@ function (_React$Component) {
   return MyStory;
 }(_react["default"].Component);
 
-var _default = MyStory;
+var _default = (0, _reactRouterDom.withRouter)(MyStory);
+
 exports["default"] = _default;
 //# sourceMappingURL=MyStory.js.map
