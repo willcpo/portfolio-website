@@ -8,6 +8,9 @@ import Resume from "./Resume";
 import Projects from "./Projects";
 import ContactMe from "./ContactMe";
 
+//REMEMBER TO BUILD FOR EVERY UPLOAD -- otherwise change to   "start": "npm run build && node ./build/server.js",
+//RUN npm run build
+
 class App extends React.Component {
 
 

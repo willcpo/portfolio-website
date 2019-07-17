@@ -60,23 +60,23 @@ function (_React$Component) {
       var _this2 = this;
 
       if (this.props.context) return;
-      console.log("mounting");
       var links = document.querySelectorAll(".circleLink");
       links.forEach(function (link) {
         link.addEventListener("click", function () {
           setTimeout(function () {
             _this2.resize();
-          }, 50);
+          }, 200);
         });
       });
       window.addEventListener("resize", this.resize);
-      this.resize();
+      setTimeout(function () {
+        _this2.resize.call();
+      }, 100);
     }
   }, {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
       if (this.props.context) return;
-      console.log("unmounting");
       window.removeEventListener("resize", this.resize);
     }
   }, {
@@ -87,9 +87,8 @@ function (_React$Component) {
       if (this.props.history.location.pathname == "/") {
         if (window.innerWidth > 689) {
           this.props.history.push("/programming");
-          var thiss = this;
           setTimeout(function () {
-            _this3.resize.call(thiss, "programming", thiss.setState.bind(thiss));
+            _this3.resize.call();
           }, 50);
           return;
         } else {
@@ -97,7 +96,6 @@ function (_React$Component) {
         }
       }
 
-      console.log("resizing");
       var display = document.querySelector(".display");
       var selected = document.querySelector(".selectedStory");
       var timeline = document.querySelector(".timeline");

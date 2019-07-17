@@ -54,7 +54,7 @@ function (_React$Component) {
       var collapsable = document.querySelectorAll(".rowNum0, .rowNum1, .rowNum2, .rowNum3, .rowNum4");
 
       var _loop = function _loop(i) {
-        collapsable[i].addEventListener("click touch", function () {
+        collapsable[i].addEventListener("click", function () {
           var content = this.nextElementSibling;
 
           if (content.style.maxHeight) {

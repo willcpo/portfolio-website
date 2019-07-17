@@ -42,9 +42,7 @@ function (_React$Component) {
   _createClass(ContactMe, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement("h1", {
-        className: "pageTitle"
-      }, "Contact Me"), _react["default"].createElement("div", {
+      return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement("div", {
         className: "contactPage"
       }, _react["default"].createElement("div", {
         className: "contactFirstRow"
@@ -57,27 +55,44 @@ function (_React$Component) {
       })), _react["default"].createElement("div", {
         className: "locationInfo"
       }, _react["default"].createElement("p", null, _react["default"].createElement("em", null, "Based in"), " ", _react["default"].createElement("br", null), _react["default"].createElement("b", null, "Fairfield, CT, USA")), _react["default"].createElement("p", null, _react["default"].createElement("em", null, "Moving to"), _react["default"].createElement("br", null), _react["default"].createElement("b", null, "San Francisco, California")))), _react["default"].createElement("div", {
-        className: "contactInfoSection"
-      }, _react["default"].createElement("p", null, "Hi! Thanks for visiting my website! I really appreciate your support. I'm currently looking for a career in front-end, back-end and full stack development, specifically in Java and web development.", _react["default"].createElement("br", null), _react["default"].createElement("br", null), "Please contact me with any projects you hope for me to work on. I am excited to connect and prove my skills.")), _react["default"].createElement("div", {
-        className: "contactSection"
+        className: "contactSection cs2"
       }, _react["default"].createElement("div", {
         className: "contactInfo"
       }, _react["default"].createElement("p", null, _react["default"].createElement("em", null, "Email"), " ", _react["default"].createElement("br", null), _react["default"].createElement("img", {
         src: "/img/E.png"
-      })), _react["default"].createElement("p", null, _react["default"].createElement("em", null, "Phone Number"), _react["default"].createElement("br", null), _react["default"].createElement("img", {
+      }))), _react["default"].createElement("div", {
+        className: "contactInfo"
+      }, _react["default"].createElement("p", null, _react["default"].createElement("em", null, "Phone Number"), _react["default"].createElement("br", null), _react["default"].createElement("img", {
         src: "/img/TP.png"
-      }))))), _react["default"].createElement("div", {
-        className: "socialMedia"
+      })))), _react["default"].createElement("div", {
+        className: "tempColumn"
+      }, _react["default"].createElement("div", {
+        className: "contactInfoSection"
+      }, _react["default"].createElement("p", null, "Hi! Thanks for visiting my website! I really appreciate your support. I'm currently looking for a career in front-end, back-end and full stack development, specifically in Java and web development.", _react["default"].createElement("br", null), _react["default"].createElement("br", null), "Please contact me with any projects you hope for me to work on. I am excited to connect and prove my skills.")), _react["default"].createElement("div", {
+        className: "contactSection cs1"
+      }, _react["default"].createElement("div", {
+        className: "contactInfo"
+      }, _react["default"].createElement("p", null, _react["default"].createElement("em", null, "Email"), " ", _react["default"].createElement("br", null), _react["default"].createElement("img", {
+        src: "/img/E.png"
+      }))), _react["default"].createElement("div", {
+        className: "contactInfo"
+      }, _react["default"].createElement("p", null, _react["default"].createElement("em", null, "Phone Number"), _react["default"].createElement("br", null), _react["default"].createElement("img", {
+        src: "/img/TP.png"
+      })))))), _react["default"].createElement("div", {
+        className: "socialRow"
       }, _react["default"].createElement("a", {
-        href: "https://github.com/willcpo"
+        href: "https://github.com/willcpo",
+        className: "socialMedia"
       }, _react["default"].createElement("img", {
         src: "/img/githubBig.png"
       }), _react["default"].createElement("p", null, "Pull My Repositories")), _react["default"].createElement("a", {
-        href: "https://www.linkedin.com/in/wcp227/"
+        href: "https://www.linkedin.com/in/wcp227/",
+        className: "socialMedia"
       }, _react["default"].createElement("img", {
         src: "/img/linkedinBig.png"
       }), _react["default"].createElement("p", null, "Connect With Me")), _react["default"].createElement("a", {
-        href: "https://www.facebook.com/Willcpo"
+        href: "https://www.facebook.com/Willcpo",
+        className: "socialMedia"
       }, _react["default"].createElement("img", {
         src: "/img/facebookBig.png"
       }), _react["default"].createElement("p", null, "Friend and Follow")))));
