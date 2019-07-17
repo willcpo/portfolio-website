@@ -11,7 +11,7 @@
     "heroku-postbuild": "webpack -p",
     "devstart": "nodemon --exec babel-node src/server.js --ignore public/",
 	"dev": "concurrently \"npm run devstart\" \"node-sass --watch sass -o public\" \"webpack -wd\"",
-	"deploy": "npm build && git add . && git commit -m\"new deploy\" && git pull && git push"
+	"deploy": "npm run build && git add . && git commit -m\"new deploy\" && git pull && git push"
   },
   "bin": {
     "babel-node": "./node_modules/.bin/babel-node"

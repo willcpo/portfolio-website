@@ -2,10 +2,6 @@
 
 var _config = _interopRequireDefault(require("./config"));
 
-var _nodeSassMiddleware = _interopRequireDefault(require("node-sass-middleware"));
-
-var _path = _interopRequireDefault(require("path"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _App = _interopRequireDefault(require("./components/App"));
@@ -19,13 +15,9 @@ var _express = _interopRequireDefault(require("express"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var server = (0, _express["default"])();
-server.set("view engine", "ejs");
-server.use((0, _nodeSassMiddleware["default"])({
-  src: _path["default"].join(__dirname, "/../sass"),
-  dest: _path["default"].join(__dirname, "/../public"),
-  indentedSyntax: false,
-  sourceMap: true
-}));
+server.set("view engine", "ejs"); //REMEMBER TO BUILD FOR EVERY UPLOAD -- otherwise change to   "start": "npm run build && node ./build/server.js",
+//RUN npm run build
+
 server.use(_express["default"]["static"]("public"));
 server.get("*", function (req, res) {
   res.render("index", {
