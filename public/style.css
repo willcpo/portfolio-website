@@ -14,11 +14,23 @@ body {
   background-color: #232528;
   color: #F5CB5C;
   font-family: 'Times New Roman', Times, serif;
+  -webkit-animation-name: Logo;
   animation-name: Logo;
+  -webkit-animation-duration: 20s;
   animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.25, 0, 0, 1);
   animation-timing-function: cubic-bezier(0.25, 0, 0, 1);
   height: 81.2px; }
+
+@-webkit-keyframes Logo {
+  0%, 7% {
+    width: 112px; }
+  20%, 57% {
+    width: 212.8px; }
+  77%, 100% {
+    width: 112px; } }
 
 @keyframes Logo {
   0%, 7% {
@@ -37,10 +49,25 @@ body {
   z-index: 1;
   font-size: 35px;
   position: relative;
+  -webkit-animation-name: ill;
   animation-name: ill;
+  -webkit-animation-duration: 20s;
   animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.25, 0, 0, 1);
   animation-timing-function: cubic-bezier(0.25, 0, 0, 1); }
+
+@-webkit-keyframes ill {
+  0%, 7% {
+    right: 43.4px;
+    opacity: 0; }
+  20%, 53% {
+    right: 5.6px;
+    opacity: 1; }
+  75%, 100% {
+    right: 43.4px;
+    opacity: 0; } }
 
 @keyframes ill {
   0%, 7% {
@@ -57,10 +84,22 @@ body {
   font-size: 70px;
   position: relative;
   z-index: 3;
+  -webkit-animation-name: p;
   animation-name: p;
+  -webkit-animation-duration: 20s;
   animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.25, 0, 0, 1);
   animation-timing-function: cubic-bezier(0.25, 0, 0, 1); }
+
+@-webkit-keyframes p {
+  0%, 7% {
+    right: 28px; }
+  20%, 53% {
+    right: -5.6px; }
+  81%, 100% {
+    right: 28px; } }
 
 @keyframes p {
   0%, 7% {
@@ -73,10 +112,25 @@ body {
 .owers {
   font-size: 35px;
   position: relative;
+  -webkit-animation-name: owers;
   animation-name: owers;
+  -webkit-animation-duration: 20s;
   animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.25, 0, 0, 1);
   animation-timing-function: cubic-bezier(0.25, 0, 0, 1); }
+
+@-webkit-keyframes owers {
+  0%, 7% {
+    right: 126px;
+    opacity: 0; }
+  23%, 55% {
+    right: 5.6px;
+    opacity: 1; }
+  77%, 100% {
+    right: 126px;
+    opacity: 0; } }
 
 @keyframes owers {
   0%, 7% {
@@ -109,8 +163,14 @@ body {
   top: 35px;
   font-size: 22px;
   font-weight: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   min-width: 63%; }
   @media screen and (max-width: 689px) {
@@ -121,9 +181,18 @@ body {
   position: absolute;
   font-size: 22px;
   font-weight: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   z-index: 6;
   width: 100%;
@@ -143,6 +212,8 @@ body {
   text-align: center; }
 
 #icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 40%;
   margin: auto; }
@@ -196,18 +267,30 @@ body {
   display: initial; }
 
 #menu-opening {
+  -webkit-animation-name: menu-opening;
   animation-name: menu-opening;
+  -webkit-animation-duration: .5s;
   animation-duration: .5s;
+  -webkit-animation-timing-function: cubic-bezier(0.25, 0, 0, 1);
   animation-timing-function: cubic-bezier(0.25, 0, 0, 1); }
 
 #menu-closing {
+  -webkit-animation-name: menu-opening;
   animation-name: menu-opening;
+  -webkit-animation-duration: .5s;
   animation-duration: .5s;
   animation-direction: reverse;
+  -webkit-animation-timing-function: cubic-bezier(0.25, 0, 0, 1);
   animation-timing-function: cubic-bezier(0.25, 0, 0, 1); }
 
 #menu-open {
   width: 100%; }
+
+@-webkit-keyframes menu-opening {
+  0% {
+    width: 0%; }
+  100% {
+    width: 100%; } }
 
 @keyframes menu-opening {
   0% {
@@ -225,9 +308,13 @@ body {
   background-color: #232528; }
 
 #centeredContent {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex; }
 
 .display {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   width: 340px;
   background-color: #333533;
@@ -286,10 +373,17 @@ body {
 
 .timeline {
   position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
   margin-top: 50px;
   margin-bottom: 50px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   height: 100%; }
 
@@ -349,6 +443,8 @@ body {
   height: 87.5%;
   width: 10px;
   background-color: #F5CB5C;
+  -webkit-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
   transform: scale(1.1, 1.1);
   margin-top: 45px; }
   @media screen and (max-height: 700px) {
@@ -450,21 +546,41 @@ body {
   margin-bottom: -20px; }
 
 .projectBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-line-pack: center;
   align-content: center;
   margin: 20px;
   margin-bottom: 40px; }
 
 .projectRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row;
   flex-flow: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 100%; }
   @media screen and (max-width: 689px) {
     .projectRow {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: column;
       flex-flow: column; } }
 
 .projectBox .projectRow:last-child p {
@@ -495,6 +611,7 @@ body {
     width: 100%; } }
 
 .projectText {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   max-width: 510px;
@@ -556,14 +673,27 @@ body {
       margin-top: -20px; } }
   .contactPage .contactFirstRow {
     margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     max-width: 1230px; }
     @media screen and (max-width: 605px) {
       .contactPage .contactFirstRow {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column; } }
     @media screen and (max-width: 689px) {
       .contactPage .contactFirstRow {
@@ -573,9 +703,17 @@ body {
         max-width: 700px; } }
     .contactPage .contactFirstRow .personalSection {
       background-color: #333533;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: column;
       flex-flow: column;
+      -ms-flex-line-pack: space-evenly;
       align-content: space-evenly;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
       padding: 20px;
       border-radius: 25px;
@@ -586,8 +724,14 @@ body {
         height: 175px;
         border: 5px solid #F5CB5C; }
       .contactPage .contactFirstRow .personalSection .locationInfo {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column;
         flex-flow: column;
+        -ms-flex-line-pack: distribute;
         align-content: space-around;
         color: lightgray;
         font-size: 20px;
@@ -634,9 +778,17 @@ body {
         display: none !important; } }
     .contactPage .contactFirstRow .contactSection {
       background-color: #333533;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: column;
       flex-flow: column;
+      -ms-flex-line-pack: center;
       align-content: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
       padding: 20px;
       border-radius: 25px;
@@ -644,6 +796,9 @@ body {
       margin: 20px; }
       @media screen and (min-width: 921px) {
         .contactPage .contactFirstRow .contactSection {
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-flow: row;
           flex-flow: row;
           padding-left: 7px;
           padding-right: 7px; } }
@@ -659,6 +814,9 @@ body {
         .contactPage .contactFirstRow .contactSection {
           width: 88%;
           max-width: initial;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-flow: row;
           flex-flow: row;
           height: initial;
           padding: 0;
@@ -666,6 +824,9 @@ body {
           margin-right: 0; } }
       @media screen and (max-width: 505px) {
         .contactPage .contactFirstRow .contactSection {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-flow: column;
           flex-flow: column; } }
       @media screen and (max-width: 605px) {
         .contactPage .contactFirstRow .contactSection p {
@@ -694,18 +855,36 @@ body {
             font-size: 29px;
             padding: 19px; } }
   .contactPage .tempColumn {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     max-width: 500px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center; }
     @media screen and (max-width: 920px) {
       .contactPage .tempColumn {
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
         order: 3; } }
   .contactPage .socialRow {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row;
     flex-flow: row;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -ms-flex-line-pack: justify;
     align-content: space-between;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center; }
   .contactPage .socialMedia {
     background-color: #333533;
@@ -713,10 +892,19 @@ body {
     border-radius: 25px;
     color: lightgray;
     font-size: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     text-decoration: none;
     margin: 20px;
@@ -742,6 +930,8 @@ body {
 .collapsedcontent {
   max-height: 0;
   overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  -o-transition: max-height 0.2s ease-out;
   transition: max-height 0.2s ease-out; }
 
 .resumeContent {
@@ -831,5 +1021,3 @@ body {
     top: 15.5px; }
   .rowNum4 .resumeDot {
     top: 13.5px; }
-
-/*# sourceMappingURL=style.css.map */

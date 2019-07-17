@@ -40,6 +40,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 //REMEMBER TO BUILD FOR EVERY UPLOAD -- otherwise change to   "start": "npm run build && node ./build/server.js",
+//RUN npm run build
 var App =
 /*#__PURE__*/
 function (_React$Component) {
