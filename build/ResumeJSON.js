@@ -22,7 +22,7 @@ var _default = {
     "Concepts": ["Agile", "Scrum", "OOP", "Model-View-Controller", "Responsive Design", "Unit Testing", "Web Accessibility", "Client-Server access"]
   },
   "Employment": {
-    "Research Intern - Friedlander Lobbying": ["February 2017- June 2017", "Lobbied Congress members to award Anwar Sadat a Congressional Gold Medal, which ultimately succeeded", "Collected and maintained a database of 1000s of congressional staff information", "Created relationships and developed individualized appeals for around 100 Congressional members"],
+    "Research Intern - The FriedLander Group": ["February 2017- June 2017", "Lobbied Congress members to award Anwar Sadat a Congressional Gold Medal, which ultimately succeeded", "Collected and maintained a database of 1000s of congressional staff information", "Created relationships and developed individualized appeals for around 100 Congressional members"],
     "Computer Teacher / Counselor - YPI Inc": ["July 2017- August 2017", "Chaperoned high school students while teaching them video and photography software", "Assisted the program with any IT needs so Students could create and present dynamic visual art"],
     "Cashier/Barista - The Pantry": ["March 2015- July 2017", "Successfully Lobbied the House of Representatives to award Egyptian President Anwar Sadat with a Congressional Gold Medal", "Collected and maintained a database of 1000s of congressional staff information and developed individualized appeals"],
     "Journalism Intern - The Fairfield Sun": ["May 2017 - June 2017", "Wrote for the paper and got three articles on the front page, two above the fold", "Wrote copy for many articles, took photos and did general intern activities"]
