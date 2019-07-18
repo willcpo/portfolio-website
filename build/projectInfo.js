@@ -23,7 +23,7 @@ var _default = [{
   "githubLink": "https://github.com/nyu-csci-ua-0480-008-spring-2019/willcpo-final-project",
   "infoRows": [{
     "src": "gifs/newsWiz1.gif",
-    "text": "Developed a RSS Feed Reader that can display and search through hundreds of feeds and display thousands of stories when one of potentially thousands of users' login"
+    "text": "Developed an RSS Feed Reader that can display and search through hundreds of feeds and display thousands of stories when one of potentially thousands of users' login"
   }, {
     "src": "gifs/newsWiz3.gif",
     "text": "Users can add new feeds to the database or search through ones added by previous users"
@@ -38,10 +38,10 @@ var _default = [{
   "githubLink": "https://github.com/willcpo/Planner-Pet",
   "infoRows": [{
     "src": "gifs/plannerPet3.gif",
-    "text": "Created a Task Management app integrated with Notifications and a Calendar View. Thousands of Tasks can be stored in a mySQL database via Core Data and viewable in a Table View"
+    "text": "Created a task management app integrated with notifications and a calendar View. Thousands of tasks can be stored in a MySQL database via core data and viewable in a table view"
   }, {
     "src": "gifs/plannerPet2.gif",
-    "text": "Data on how task are completed is connected to the health of an cartoon Pet. Completion of tasks allows animated interactions with the pet and the ability to play games developed in SpriteKit"
+    "text": "Data on how tasks are completed is connected to the health of a cartoon pet. Completion of tasks allows animated interactions with the pet and the ability to play games developed in SpriteKit"
   }, {
     "src": "gifs/plannerPet1.gif",
     "text": ""
