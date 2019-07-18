@@ -44,9 +44,6 @@ var _default = [{
     "text": "Data on how tasks are completed is connected to the health of a cartoon pet. Completion of tasks allows animated interactions with the pet and the ability to play games developed in SpriteKit"
   }, {
     "src": "gifs/plannerPet1.gif",
-    "text": ""
-  }, {
-    "src": "",
     "text": "Objective C, NSNotificationCenter, Sprite Kit, Core Data (SQL), Foundation, UIKit, Coca Touch, MVC Pattern, Interface Builder, Outlets, Object-Oriented Programming, Segues, TableView, OpenSource"
   }]
 }, {
