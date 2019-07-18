@@ -327,7 +327,7 @@ body {
   text-align: left;
   color: lightgray;
   line-height: 2;
-  font-size: 14px;
+  font-size: 16px;
   text-align: justify; }
   @media screen and (max-width: 690px) {
     .display {
@@ -1025,3 +1025,7 @@ body {
     top: 15.5px; }
   .rowNum4 .resumeDot {
     top: 13.5px; }
+
+@media screen and (max-width: 689px) {
+  .disapearOnMobile {
+    display: none; } }
