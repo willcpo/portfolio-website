@@ -145,7 +145,11 @@ function (_React$Component) {
             className: "storyTitle"
           }, "Singing & Acting"), _react["default"].createElement("p", {
             className: "storyParagraph"
-          }, "\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0Since I can remember, I have always been a performer. I joined the chorus in high school and middle school and have had the privilege of performing solos in school concerts. I have sung and acted in countless film projects of myself and my friends, as well as many school plays.", _react["default"].createElement("br", null), _react["default"].createElement("br", null), "\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0I received a state award in performing arts for my contributions, including my daily role as the morning announcer in high school.", _react["default"].createElement("br", null), _react["default"].createElement("br", null), "Such roles include The Cowardly Lion in \u201CThe Wizard of Oz\u201D, Fagin in \u201COliver\u201D and Macbeth in \u201CMacbeth\u201D.")));
+          }, _react["default"].createElement("span", {
+            className: "disapearOnMobile"
+          }, "\xA0\xA0\xA0\xA0"), "\xA0\xA0\xA0\xA0Since I can remember, I have always been a performer. I joined the chorus in high school and middle school and have had the privilege of performing solos in school concerts. I have sung and acted in countless film projects of myself and my friends, as well as many school plays.", _react["default"].createElement("br", null), _react["default"].createElement("br", null), _react["default"].createElement("span", {
+            className: "disapearOnMobile"
+          }, "\xA0\xA0\xA0\xA0"), "\xA0\xA0\xA0\xA0I received a state award in performing arts for my contributions, including my daily role as the morning announcer in high school.", _react["default"].createElement("br", null), _react["default"].createElement("br", null), "Such roles include The Cowardly Lion in \u201CThe Wizard of Oz\u201D, Fagin in \u201COliver\u201D and Macbeth in \u201CMacbeth\u201D.")));
         }
       }), _react["default"].createElement(_reactRouterDom.Route, {
         exact: true,
@@ -164,7 +168,11 @@ function (_React$Component) {
             className: "storyTitle"
           }, "Film & Animation"), _react["default"].createElement("p", {
             className: "storyParagraph"
-          }, "\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0Since childhood I wrote, filmed and edited many of my own digital video projects using Final Cut, Adobe Premiere and various other projects.", _react["default"].createElement("br", null), _react["default"].createElement("br", null), "\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0At Emerson College, I pursued those interests, developing a keen eye in the art of aesthetics and narrative, as well as developing a profound interest and skillset in animation, which I found technically engaging and incredibly flexible as a communication medium.")));
+          }, _react["default"].createElement("span", {
+            className: "disapearOnMobile"
+          }, "\xA0\xA0\xA0\xA0"), "\xA0\xA0\xA0\xA0Since childhood I wrote, filmed and edited many of my own digital video projects using Final Cut, Adobe Premiere and various other projects.", _react["default"].createElement("br", null), _react["default"].createElement("br", null), _react["default"].createElement("span", {
+            className: "disapearOnMobile"
+          }, "\xA0\xA0\xA0\xA0"), "\xA0\xA0\xA0\xA0At Emerson College, I pursued those interests, developing a keen eye in the art of aesthetics and narrative, as well as developing a profound interest and skillset in animation, which I found technically engaging and incredibly flexible as a communication medium.")));
         }
       }), _react["default"].createElement(_reactRouterDom.Route, {
         exact: true,
@@ -183,7 +191,13 @@ function (_React$Component) {
             className: "storyTitle"
           }, "Political Science"), _react["default"].createElement("p", {
             className: "storyParagraph"
-          }, "\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0While pursuing film, I wrote almost exclusively about history and science. My frustration grew as I began to realize that film was not a sufficient enough medium to convey intricate and grand ideas about our world and to sway public opinion.", _react["default"].createElement("br", null), _react["default"].createElement("br", null), "\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0To study exactly how the trajectory of history and science can be shaped, I decided to leave Emerson and transfer to NYU to study political science.", _react["default"].createElement("br", null), _react["default"].createElement("br", null), "\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0In studying game theory and statistical analysis, I hoped to understand the mechanisms in which historical and technological change can manifest itself within society and government.")));
+          }, _react["default"].createElement("span", {
+            className: "disapearOnMobile"
+          }, "\xA0\xA0\xA0\xA0"), "\xA0\xA0\xA0\xA0While pursuing film, I wrote almost exclusively about history and science. My frustration grew as I began to realize that film was not a sufficient enough medium to convey intricate and grand ideas about our world and to sway public opinion.", _react["default"].createElement("br", null), _react["default"].createElement("br", null), _react["default"].createElement("span", {
+            className: "disapearOnMobile"
+          }, "\xA0\xA0\xA0\xA0"), "\xA0\xA0\xA0\xA0To study exactly how the trajectory of history and science can be shaped, I decided to leave Emerson and transfer to NYU to study political science.", _react["default"].createElement("br", null), _react["default"].createElement("br", null), _react["default"].createElement("span", {
+            className: "disapearOnMobile"
+          }, "\xA0\xA0\xA0\xA0"), "\xA0\xA0\xA0\xA0In studying game theory and statistical analysis, I hoped to understand the mechanisms in which historical and technological change can manifest itself within society and government.")));
         }
       }), _react["default"].createElement(_reactRouterDom.Route, {
         exact: true,
@@ -202,7 +216,13 @@ function (_React$Component) {
             className: "storyTitle"
           }, "Computer Programming"), _react["default"].createElement("p", {
             className: "storyParagraph"
-          }, "\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0While I deeply enjoyed learning about politics through the lens of game theory and statistical analysis, I realized that that career trajectory would not lead me to help implement technological and historical triumphs. For that, my eyes turned toward the society-changing sectors of software and web technologies.", _react["default"].createElement("br", null), _react["default"].createElement("br", null), "\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0The extension of human thought and memory, facilitated by communication and software technologies have allowed humans to understand more about their world and expand their potentials. That is a revolution of human history that I would like to be a part of.", _react["default"].createElement("br", null), _react["default"].createElement("br", null), "\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0That is exactly why I chose to change my major once again and graduate Magna Cum Laude, majoring in Computer Science with a GPA of 3.95")));
+          }, _react["default"].createElement("span", {
+            className: "disapearOnMobile"
+          }, "\xA0\xA0\xA0\xA0"), "\xA0\xA0\xA0\xA0While I deeply enjoyed learning about politics through the lens of game theory and statistical analysis, I realized that that career trajectory would not lead me to help implement technological and historical triumphs. For that, my eyes turned toward the society-changing sectors of software and web technologies.", _react["default"].createElement("br", null), _react["default"].createElement("br", null), _react["default"].createElement("span", {
+            className: "disapearOnMobile"
+          }, "\xA0\xA0\xA0\xA0"), "\xA0\xA0\xA0\xA0The extension of human thought and memory, facilitated by communication and software technologies have allowed humans to understand more about their world and expand their potentials. That is a revolution of human history that I would like to be a part of.", _react["default"].createElement("br", null), _react["default"].createElement("br", null), _react["default"].createElement("span", {
+            className: "disapearOnMobile"
+          }, "\xA0\xA0\xA0\xA0"), "\xA0\xA0\xA0\xA0That is exactly why I chose to change my major once again and graduate Magna Cum Laude, majoring in Computer Science with a GPA of 3.95")));
         }
       })), _react["default"].createElement(_reactRouterDom.Route, {
         exact: true,
