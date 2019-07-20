@@ -105,7 +105,7 @@ function (_React$Component) {
         id: this.state.nav
       }, _react["default"].createElement(_reactRouterDom.Link, {
         className: "navItem",
-        to: "/Programming",
+        to: "/",
         id: ["", "acting", "film", "politics", "programming"].includes(selected.toLowerCase()) ? "selected" : "",
         onClick: this.checkMenuOpen
       }, "My Story"), _react["default"].createElement(_reactRouterDom.Link, {
